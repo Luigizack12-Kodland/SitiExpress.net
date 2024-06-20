@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prodotti - SitiExpress</title>
+    <link rel="stylesheet" href="C:\Users\elear\OneDrive\Desktop\SitiExpress\.css\styles.css">
+    <script defer src="C:\Users\elear\OneDrive\Desktop\SitiExpress\.js\scripts.js"></script>
+    <link rel="stylesheet" href="C:\Users\elear\OneDrive\Desktop\SitiExpress\.css\user.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="logo">SitiExpress</div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Prodotti</a></li>
+                    <li><a href="#" id="contactLink">Contatti</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Tasto Account -->
+    <button id="accountButton" class="account-button">Account</button>
+
+    <!-- Container per i pulsanti Iscriviti ed Esci -->
+    <div id="accountOptions" class="account-options hidden">
+        <a href="iscriviti.html" class="signup-button" id="signupButton">Iscriviti</a>
+        <button class="logout-button hidden" id="logoutButton">Esci</button>
+    </div>
+
+    <!-- Logout Confirm Modal -->
+    <div id="logoutConfirmModal" class="modal hidden">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <p>Sei sicuro di voler uscire?</p>
+            <button id="logoutConfirmYes">Sì</button>
+            <button id="logoutConfirmNo">No</button>
+        </div>
+    </div>
+
+
+    <!-- Products Section -->
+    <section id="products" class="products-section">
+        <div class="container">
+            <h2>I Nostri Prodotti</h2>
+            <div class="model-grid">
+                <!-- Modello 1 -->
+                <div class="model">
+                    <img src="" alt="Modello 1">
+                    <h3>Modello 1</h3>
+                    <p>Descrizione breve del modello 1.</p>
+                </div>
+                <!-- Modello 2 -->
+                <div class="model">
+                    <img src="model2.jpg" alt="Modello 2">
+                    <h3>Modello 2</h3>
+                    <p>Descrizione breve del modello 2.</p>
+                </div>
+                <!-- Modello 3 -->
+                <div class="model">
+                    <img src="model3.jpg" alt="Modello 3">
+                    <h3>Modello 3</h3>
+                    <p>Descrizione breve del modello 3.</p>
+                </div>
+                <!-- Modello 4 -->
+                <div class="model">
+                    <img src="model4.jpg" alt="Modello 4">
+                    <h3>Modello 4</h3>
+                    <p>Descrizione breve del modello 4.</p>
+                </div>
+                <!-- Modello 5 -->
+                <div class="model">
+                    <img src="model5.jpg" alt="Modello 5">
+                    <h3>Modello 5</h3>
+                    <p>Descrizione breve del modello 5.</p>
+                </div>
+                <!-- Modello 6 -->
+                <div class="model">
+                    <img src="model6.jpg" alt="Modello 6">
+                    <h3>Modello 6</h3>
+                    <p>Descrizione breve del modello 6.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <p>Seguici sui social!</p>
+                <ul class="social-media">
+                    <li><a href="#">Youtube</a></li>
+                </ul>
+                <p>Contatti: siti.expressmod@gmail.com</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Nella sezione Home (index.html) -->
+    <a href="preference.html#cookies-preferences" class="floating-button" id="manage-cookies-button">Gestisci i cookies</a>
+
+    <!-- Cookie Banner -->
+    <div id="cookie-banner" class="cookie-banner">
+        <p>Questo sito utilizza i cookie per migliorare l'esperienza utente. <a href="cookies.html">Scopri di più</a>.</p>
+        <div class="cookie-buttons">
+            <button id="accept-cookies" class="cookie-button">Accetta</button>
+            <button id="reject-cookies" class="cookie-button">Rifiuta</button>
+        </div>
+    </div>
+    
+    <div class="overlay hidden"></div>
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>

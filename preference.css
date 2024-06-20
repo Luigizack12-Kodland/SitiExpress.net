@@ -1,0 +1,127 @@
+/* Importa font eleganti */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;600&display=swap');
+
+/* Impostazioni generali del corpo */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #000000, #1a1a1a);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Animazione fadeIn */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Contenitore principale */
+section {
+    background: #2c2c2c;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(186, 85, 211, 0.8);
+    padding: 30px;
+    width: 100%;
+    max-width: 800px;
+    margin-bottom: 20px;
+}
+
+/* Titolo principale */
+h1 {
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    font-size: 32px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Titoli secondari */
+h2 {
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+/* Paragrafi informativi */
+p {
+    color: #bbb;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    margin-bottom: 1rem;
+    text-align: justify;
+}
+
+/* Liste */
+ul, ol {
+    margin-left: 20px;
+    color: #bbb;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+/* Contenitore pulsanti */
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+/* Pulsanti cookie */
+.cookie-button {
+    background: linear-gradient(135deg, #6a0dad, #b57edc);
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    cursor: pointer;
+    border-radius: 12px;
+    transition: background-color 0.3s, transform 0.3s;
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    box-shadow: 0 4px 10px rgba(106, 13, 173, 0.5);
+}
+
+.cookie-button:hover {
+    background: linear-gradient(135deg, #5b0c99, #a46bbd);
+    transform: scale(1.1);
+}
+
+/* Stile delle liste ordinate e non ordinate */
+ol {
+    list-style: decimal inside;
+}
+
+ul {
+    list-style: disc inside;
+}
+
+/* Paragrafo informativo evidenziato */
+p.info {
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    text-align: center;
+}

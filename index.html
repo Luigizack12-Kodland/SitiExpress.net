@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - SitiExpress</title>
+    <link rel="stylesheet" href="C:\Users\elear\OneDrive\Desktop\SitiExpress\.css\styles.css">
+    <script defer src="C:\Users\elear\OneDrive\Desktop\SitiExpress\.js\scripts.js"></script>
+    <link rel="stylesheet" href="C:\Users\elear\OneDrive\Desktop\SitiExpress\.css\user.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="logo">SitiExpress</div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Prodotti</a></li>
+                    <li><a href="#" id="contactLink">Contatti</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+
+    <!-- Tasto Account -->
+    <button id="accountButton" class="account-button">Account</button>
+
+    <!-- Container per i pulsanti Iscriviti ed Esci -->
+    <div id="accountOptions" class="account-options hidden">
+        <a href="iscriviti.html" class="signup-button" id="signupButton">Iscriviti</a>
+        <button class="logout-button hidden" id="logoutButton">Esci</button>
+    </div>
+
+    <!-- Logout Confirm Modal -->
+    <div id="logoutConfirmModal" class="modal hidden">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <p>Sei sicuro di voler uscire?</p>
+            <button id="logoutConfirmYes">Sì</button>
+            <button id="logoutConfirmNo">No</button>
+        </div>
+    </div>
+
+    
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Scopri i Migliori Modelli di Siti Web</h1>
+                <p>Acquista i migliori modelli per il tuo sito web.</p>
+                <a href="products.html" class="cta-button">Esplora i Modelli</a>
+            </div>
+        </div>
+    </section>
+
+    <div class="welcome-message-container" id="welcome-message">
+        Benvenuto/a su SitiExpress, <span id="welcome-username"></span>!
+        <button class="ok-button" id="ok-button">OK</button>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const welcomeMessage = document.getElementById('welcome-message');
+            const okButton = document.getElementById('ok-button');
+            const usernameSpan = document.getElementById('welcome-username');
+            const username = localStorage.getItem('username');
+
+            if (username) {
+                usernameSpan.textContent = username;
+                welcomeMessage.style.display = 'block';
+                welcomeMessage.classList.add('fade-in');
+            }
+
+            okButton.addEventListener('click', function() {
+                welcomeMessage.classList.add('fade-out');
+                setTimeout(function() {
+                    welcomeMessage.style.display = 'none';
+                    localStorage.removeItem('username'); // Rimuovi il nome utente dopo aver mostrato il messaggio
+                }, 700); // Tempo per completare l'animazione
+            });
+        });
+        $(document).ready(function() {
+    // Al click su "ChatGPT" o "OpenAI"
+    $('.link-to-cookies').click(function(e) {
+        e.preventDefault(); // Impedisce il comportamento predefinito del link
+
+        // Animazione per far scomparire la sezione delle preferenze dei cookie in cookies.html
+        $('#cookies-preferences').fadeOut(500, function() {
+            // Dopo l'animazione, scrolla fino alla sezione home su index.html
+            $('html, body').animate({
+                scrollTop: $('#home').offset().top // Sostituire con l'ID o la classe della sezione home
+            }, 500);
+        });
+    });
+});
+    </script>
+
+    <!-- Introduction Section -->
+    <section id="introduction" class="introduction">
+        <div class="container">
+            <h2>Benvenuti su SitiExpress</h2>
+            <p>Siamo dedicati a offrirti i migliori modelli di siti web per aiutarti a creare un sito web professionale e accattivante. Con la nostra vasta gamma di modelli, troverai sicuramente quello perfetto per te.</p>
+        </div>
+    </section>
+
+    <!-- Popular Models Section -->
+    <section id="popular-models" class="models-section">
+        <div class="container">
+            <h2>Modelli Popolari</h2>
+            <div class="model-grid">
+                <!-- Modello 1 -->
+                <div class="model">
+                    <img src="model1.jpg" alt="Modello 1">
+                    <h3>Modello 1</h3>
+                    <p>Descrizione breve del modello 1.</p>
+                </div>
+                <!-- Modello 2 -->
+                <div class="model">
+                    <img src="model2.jpg" alt="Modello 2">
+                    <h3>Modello 2</h3>
+                    <p>Descrizione breve del modello 2.</p>
+                </div>
+                <!-- Modello 3 -->
+                <div class="model">
+                    <img src="model3.jpg" alt="Modello 3">
+                    <h3>Modello 3</h3>
+                    <p>Descrizione breve del modello 3.</p>
+                </div>
+                <!-- Aggiungi altri modelli se necessario -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <h2>Caratteristiche Principali</h2>
+            <div class="features-grid">
+                <div class="feature">
+                    <h3>Design Responsivo</h3>
+                    <p>I nostri modelli sono progettati per essere completamente responsivi, garantendo una visualizzazione ottimale su qualsiasi dispositivo.</p>
+                </div>
+                <div class="feature">
+                    <h3>Facile Personalizzazione</h3>
+                    <p>Personalizza facilmente i nostri modelli per adattarli al tuo brand e alle tue esigenze specifiche.</p>
+                </div>
+                <div class="feature">
+                    <h3>Supporto Tecnico</h3>
+                    <p>Offriamo supporto tecnico dedicato per aiutarti a risolvere qualsiasi problema tu possa incontrare.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials-section">
+        <div class="container">
+            <h2>Testimonianze dei Clienti</h2>
+            <div class="testimonials-grid">
+                <!-- Testimonianza 1 -->
+                <div class="testimonial">
+                    <img src="customer1.jpg" alt="Cliente 1">
+                    <p>"Fantastici modelli! Molto facili da usare."</p>
+                    <p>- Cliente 1</p>
+                </div>
+                <!-- Testimonianza 2 -->
+                <div class="testimonial">
+                    <img src="customer2.jpg" alt="Cliente 2">
+                    <p>"Ho trovato esattamente quello che cercavo."</p>
+                    <p>- Cliente 2</p>
+                </div>
+                <!-- Testimonianza 3 -->
+                <div class="testimonial">
+                    <img src="customer3.jpg" alt="Cliente 3">
+                    <p>"Assistenza clienti eccezionale!"</p>
+                    <p>- Cliente 3</p>
+                </div>
+                <!-- Aggiungi altre testimonianze se necessario -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section id="cta" class="cta">
+        <div class="container">
+            <h2>Inizia ora</h2>
+            <p>Esplora i nostri modelli e scegli quello giusto per te.</p>
+            <a href="products.html" class="cta-button">Scopri i Modelli</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <p>Seguici sui social!</p>
+                <ul class="social-media">
+                    <li><a href="#">Youtube</a></li>
+                </ul>
+                <p>Contatti: siti.expressmod@gmail.com</p>
+            </div>
+        </div>
+    </footer>
+
+    <a href="preference.html#cookies-preferences" class="floating-button" id="manage-cookies-button">Gestisci i cookies</a>
+
+    <!-- Cookie Banner -->
+    <div id="cookie-banner" class="cookie-banner">
+        <p>Questo sito utilizza i cookie per migliorare l'esperienza utente. <a href="cookies.html">Scopri di più</a>.</p>
+        <div class="cookie-buttons">
+            <button id="accept-cookies" class="cookie-button">Accetta</button>
+            <button id="reject-cookies" class="cookie-button">Rifiuta</button>
+        </div>
+    </div>
+    
+    <div class="overlay hidden"></div>  
+
+</body>
+</html>

@@ -1,0 +1,66 @@
+/* Welcome message container */
+#welcome-message {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: linear-gradient(135deg, #3333, #2c2c2c);
+    border-radius: 20px; /* Bordi più curvi */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3), 0 0 50px rgba(155, 48, 255, 0.5);
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    padding: 20px 40px; /* Ridimensionato il padding */
+    font-size: 1.6em; /* Ridimensionato il font */
+    z-index: 1000;
+    width: 60%; /* Ridimensionata la larghezza */
+    max-width: 400px; /* Ridimensionata la larghezza massima */
+}
+
+#welcome-message p {
+    margin-bottom: 15px; /* Ridimensionato lo spazio tra i paragrafi */
+}
+
+#welcome-username {
+    font-weight: bold;
+    color: #e0e0e0;
+}
+
+#ok-button {
+    display: block;
+    margin: 20px auto 0;
+    padding: 12px 24px; /* Ridimensionato il padding */
+    background: linear-gradient(135deg, #9b30ff, #6f00ff);
+    color: white;
+    border: none;
+    border-radius: 25px; /* Bordi più curvi */
+    cursor: pointer;
+    font-size: 1.2em; /* Ridimensionato il font */
+    font-weight: 600; /* Aggiunto un po' più di peso al font */
+    transition: background-color 0.3s, transform 0.2s ease;
+    box-shadow: 0 5px 15px rgba(155, 48, 255, 0.4);
+}
+
+#ok-button:hover {
+    background: linear-gradient(135deg, #7a25cc, #5700b3);
+    transform: scale(1.05);
+}
+
+#ok-button:focus {
+    outline: none;
+    box-shadow: 0 0 10px rgba(155, 48, 255, 0.9);
+}
+
+.fade-out {
+    animation: fadeOut 0.7s forwards;
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}

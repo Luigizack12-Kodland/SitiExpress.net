@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contatti - SitiExpress</title>
+    <link rel="stylesheet" href="C:\Users\elear\OneDrive\Desktop\SitiExpress\.css\styles.css">
+    <script defer src="C:\Users\elear\OneDrive\Desktop\SitiExpress\.js\scripts.js"></script>
+    <link rel="stylesheet" href="C:\Users\elear\OneDrive\Desktop\SitiExpress\.css\user.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="logo">SitiExpress</div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Prodotti</a></li>
+                    <li><a href="contact.html">Contatti</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+        <!-- Tasto Account -->
+        <button id="accountButton" class="account-button">Account</button>
+
+        <!-- Container per i pulsanti Iscriviti ed Esci -->
+        <div id="accountOptions" class="account-options hidden">
+            <a href="iscriviti.html" class="signup-button" id="signupButton">Iscriviti</a>
+            <button class="logout-button hidden" id="logoutButton">Esci</button>
+        </div>
+    
+        <!-- Logout Confirm Modal -->
+        <div id="logoutConfirmModal" class="modal hidden">
+            <div class="modal-content">
+                <span class="close-button">&times;</span>
+                <p>Sei sicuro di voler uscire?</p>
+                <button id="logoutConfirmYes">Sì</button>
+                <button id="logoutConfirmNo">No</button>
+            </div>
+        </div>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2 data-translate-key="contact_us">Contattaci</h2>
+            <form>
+                <label for="name" data-translate-key="name">Nome</label>
+                <input type="text" id="name" name="name">
+                
+                <label for="email" data-translate-key="email">Email</label>
+                <input type="email" id="email" name="email">
+                
+                <label for="message" data-translate-key="message">Messaggio</label>
+                <textarea id="message" name="message"></textarea>
+                
+                <button type="submit" data-translate-key="send">Invia</button>
+            </form>
+        </div>
+    </section>
+
+    <a href="preference.html#cookies-preferences" class="floating-button" id="manage-cookies-button">Gestisci i cookies</a>
+
+    <!-- Cookie Banner -->
+    <div id="cookie-banner" class="cookie-banner">
+        <p>Questo sito utilizza i cookie per migliorare l'esperienza utente. <a href="cookies.html">Scopri di più</a>.</p>
+        <div class="cookie-buttons">
+            <button id="accept-cookies" class="cookie-button">Accetta</button>
+            <button id="reject-cookies" class="cookie-button">Rifiuta</button>
+        </div>
+    </div>
+    
+    <div class="overlay hidden"></div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <p>Seguici sui social!</p>
+                <ul class="social-media">
+                    <li><a href="#">Youtube</a></li>
+                </ul>
+                <p>Contatti: siti.expressmod@gmail.com</p>
+            </div>
+        </div>
+    </footer>
+    </div>
+</body>
+</html>
